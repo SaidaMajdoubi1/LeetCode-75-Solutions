@@ -1,0 +1,13 @@
+from math import gcd
+class Solution:
+    def gcdOfStrings(self, str1: str, str2: str) -> str:
+    
+        length_gcd = gcd(len(str1), len(str2))
+    
+   
+        candidate = str1[:length_gcd]
+    
+        if (str1 == candidate * (len(str1) // length_gcd) and
+           str2 == candidate * (len(str2) // length_gcd)) :          
+           return candidate
+        return ""
