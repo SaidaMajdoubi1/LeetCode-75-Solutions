@@ -1,0 +1,9 @@
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        x_s = y_t = 0
+        while x_s < len(s) and y_t < len(t):
+            if s[x_s] == t[y_t]:
+                x_s += 1
+            y_t += 1
+        return x_s >= len(s)
+        
